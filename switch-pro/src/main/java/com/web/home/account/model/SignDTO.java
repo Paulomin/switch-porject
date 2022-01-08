@@ -4,6 +4,7 @@ public class SignDTO {
 	private int id;
 	private String userId;
 	private String userPw;
+	private String userName;
 	private String userEmail;
 	private String userPhone;
 	
@@ -31,6 +32,14 @@ public class SignDTO {
 		this.userPw = userPw;
 	}
 	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -49,9 +58,9 @@ public class SignDTO {
 
 	@Override
 	public String toString() {
-		return "SignVO [id=" + id + ", userId=" + userId + ", userPw=" + userPw 
+		return "SignDTO [id=" + id + ", userId=" + userId + ", userPw=" + userPw + ", userName=" + userName
 				+ ", userEmail=" + userEmail + ", userPhone=" + userPhone + "]";
 	}
-	
+
 	
 }

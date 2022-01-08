@@ -5,6 +5,7 @@ public class SignVO {
 	private String userId;
 	private String userPw;
 	private String userPw_chk;
+	private String userName;
 	private String userEmail;
 	private String userPhone;
 	
@@ -32,6 +33,14 @@ public class SignVO {
 		this.userPw_chk = userPw_chk;
 	}
 	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
 	public String getUserEmail() {
 		return userEmail;
 	}
@@ -50,9 +59,10 @@ public class SignVO {
 
 	@Override
 	public String toString() {
-		return "SignVO [userId=" + userId + ", userPw=" + userPw + ", userPw_chk=" + userPw_chk + ", userEmail="
-				+ userEmail + ", userPhone=" + userPhone + "]";
+		return "SignVO [userId=" + userId + ", userPw=" + userPw + ", userPw_chk=" + userPw_chk + ", userName="
+				+ userName + ", userEmail=" + userEmail + ", userPhone=" + userPhone + "]";
 	}
+	
 	
 	
 	
