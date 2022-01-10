@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>OSC 회원가입</title>
 <link rel="shortcut icon" type="image/x-icon" href="/static/icons/favicon.ico" sizes="48x48">
-<link type="text/css" rel="stylesheet" href="/static/css/style.css">
+<!--  <link type="text/css" rel="stylesheet" href="/static/css/style.css"> -->
 </head>
 <body class="sign-body">
 	<div class="sign-header-area">
@@ -16,8 +16,7 @@
 		<form action="/sign" method="post">
 			<div class="sign-main-area">
 				<label for="user_id">아이디</label>
-				<input type="text" id="user_id" name ="userId" class="sign-input" placeholder="아이디" 
-					   onblur="userIdCheck();" required>
+				<input type="text" id="user_id" name ="userId" class="sign-input" placeholder="아이디" required>
 				<div id="id_check"></div>
 				
 			</div>
@@ -61,7 +60,7 @@
 			</div>
 		</form>
 	</div>
-<script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="/static/js/checkJoin.js"></script>
+<!-- <script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="/static/js/checkJoin.js"></script>  -->
 </body>
 </html>
