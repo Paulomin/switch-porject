@@ -19,7 +19,7 @@ public class CoverController {
 	@RequestMapping(value="/main", method = RequestMethod.GET)
 	public String main() {
 		logger.info("main 페이지 정상 작동");
-		return "/jsp/main/main";
+		return "./jsp/main/main";
 	}
 	
 	
