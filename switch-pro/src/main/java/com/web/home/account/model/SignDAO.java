@@ -9,7 +9,6 @@ public class SignDAO {
 	
 	@Autowired
 	private SqlSession sess;
-	private SignDTO dto;
 	
 	public int insertAccount(SignDTO dto) {
 		return this.sess.insert("AccountMap.insertAcc", dto);
