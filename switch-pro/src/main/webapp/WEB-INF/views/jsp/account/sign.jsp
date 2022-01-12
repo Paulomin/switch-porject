@@ -45,7 +45,6 @@
 				<label for="user_email">이메일</label>
 				<input type="text" id="user_email" name ="email" class="sign-input" placeholder="이메일" required>
 				<div class="warning-message">
-					<!-- 경고메시지 -->
 				</div>
 			</div>
 			<div class="sign-main-area">
