@@ -66,6 +66,7 @@ local.properties
 ### Eclipse Patch ###
 # Spring Boot Tooling
 .sts4-cache/
+.project
 
 ### Java ###
 # Compiled class file
@@ -98,8 +99,6 @@ replay_pid*
 
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
-
-
 
 ### Windows ###
 # Windows thumbnail cache files
