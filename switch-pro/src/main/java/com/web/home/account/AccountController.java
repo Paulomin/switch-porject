@@ -52,6 +52,5 @@ public class AccountController {
 	
 	@RequestMapping(value="/main", method=RequestMethod.POST)
 	public String login(SignDTO dto) {
-		if()
 	}
 }
