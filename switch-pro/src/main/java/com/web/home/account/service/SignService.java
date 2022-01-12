@@ -15,14 +15,14 @@ public class SignService {
 	@Autowired
 	private SignDAO dao;
 	
-	@Transactional(rollbackFor=Exception.class) // Exception이 나오면 rollback 하겠다는 뜻
-	public boolean join(SignVO vo) throws Exception {
+	//@Transactional(rollbackFor=Exception.class) // Exception이 나오면 rollback 하겠다는 뜻 throws Exception
+	public boolean join(SignDTO vo) {
 		int result = dao.insertAccount(vo);
 		
 		if(result == 1) {
 			return true;
 		} else {
-			throw new Exception("회원가입 중 문제가 발생하였습니다.");
+			return false;
 		}
 		
 	}

@@ -9,9 +9,14 @@ public class SignDAO {
 	
 	@Autowired
 	private SqlSession sess;
+	private SignDTO dto;
 	
-	public int insertAccount(SignVO vo) {
-		return this.sess.insert("AccountMapper.insertAccount", vo);
+	public int insertAccount(SignDTO dto) {
+		return this.sess.insert("AccountMap.insertAcc", dto);
+	}
+	
+	public boolean selectUser(SignDTO dto) {
+		return this.sess.selectOne("", dto);
 	}
 	
 	

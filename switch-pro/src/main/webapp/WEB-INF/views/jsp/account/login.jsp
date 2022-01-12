@@ -8,7 +8,7 @@
 <link type="text/css" rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-	<!-- <jsp:include page="/WEB-INF/jsp/head/top-menu.jsp" flush="false" /> -->
+	<%-- <jsp:include page="/WEB-INF/jsp/head/top-menu.jsp" flush="false" /> --%>
 	
 	<div class="login-area">
 	<form action="/login" method="post">

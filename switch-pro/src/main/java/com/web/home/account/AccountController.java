@@ -25,6 +25,7 @@ public class AccountController {
 	
 	@Autowired
 	private SignService service;
+	private SignDTO dto;
 	 
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
@@ -32,26 +33,25 @@ public class AccountController {
 		logger.info("login 페이지 요청 성공");
 		return "/jsp/account/login";
 	}
-	
 	@RequestMapping(value="/sign", method=RequestMethod.GET)
 	public String sign() {
-		logger.info("sign 페이지 요청 성공");
-		return "/jsp/account/sign";
+		return "jsp/account/sign";
 	}
 	
 	@RequestMapping(value="/sign", method=RequestMethod.POST)
-	public String sign(SignVO vo, Model model) {
-		boolean res = false;
+	public String sign(SignDTO vo, Model model) {
+		boolean res = service.join(vo);
+		System.out.println(vo.toString());
 		
-		try {
-			res = service.join(vo);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		if(res) {
-			return "redirect: /jsp/account/login"; // 결과가 true면 가입이 완료 되어 로그인 창으로 리다이렉트시킴
+			return "redirect:/login"; // 결과가 true면 가입이 완료 되어 로그인 창으로 리다이렉트시킴
 		} else {
 			return "/jsp/account/sign"; // 회원가입 중 문제가 발생하여 가입 실패 
 		}
+	}
+	
+	@RequestMapping(value="/main", method=RequestMethod.POST)
+	public String login(SignDTO dto) {
+		
 	}
 }

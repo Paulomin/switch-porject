@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>OSC 회원가입</title>
-<link rel="shortcut icon" type="image/x-icon" href="/static/icons/favicon.ico" sizes="48x48">
-<!--  <link type="text/css" rel="stylesheet" href="/static/css/style.css"> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/static/icons/favicon.ico" sizes="48x48">
+  <link type="text/css" rel="stylesheet" href="/static/css/style.css"> -->
 </head>
 <body class="sign-body">
 	<div class="sign-header-area">
@@ -22,7 +22,7 @@
 			</div>
 			<div class="sign-main-area">
 				<label for="user_id">비밀번호</label>
-				<input type="password" id="user_pw" name ="userPw" class="sign-input" placeholder="비밀번호" required>
+				<input type="password" id="user_pw" name ="password" class="sign-input" placeholder="비밀번호" required>
 				<div class="warning-message">
 					<!-- 경고메시지 -->
 				</div>
@@ -36,21 +36,21 @@
 			</div>
 			<div class="sign-main-area">
 				<label for="user_name">이름</label>
-				<input type="text" id="user_name" name ="userName" class="sign-input" placeholder="이름" required>
+				<input type="text" id="user_name" name ="username" class="sign-input" placeholder="이름" required>
 				<div class="warning-message">
 					<!-- 경고메시지 -->
 				</div>
 			</div>
 			<div class="sign-main-area">
 				<label for="user_email">이메일</label>
-				<input type="text" id="user_email" name ="userEmail" class="sign-input" placeholder="이메일" required>
+				<input type="text" id="user_email" name ="email" class="sign-input" placeholder="이메일" required>
 				<div class="warning-message">
 					<!-- 경고메시지 -->
 				</div>
 			</div>
 			<div class="sign-main-area">
 				<label for="user_phoneNum">연락처</label>
-				<input type="text" id="user_phoneNum" name ="userPhone" class="sign-input" placeholder="연락처" required>
+				<input type="text" id="user_phoneNum" name ="phone" class="sign-input" placeholder="연락처" required>
 				<div class="warning-message">
 					<!-- 경고메시지 -->
 				</div>

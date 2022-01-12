@@ -4,5 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
+		<typeAlias type="com.web.home.account.model.SignDTO" alias="signDTO"/>
+		<typeAlias type="com.web.home.account.service.SignService" alias="signService"/>
+		<typeAlias type="com.web.home.account.model.SignDAO" alias="signDAO"/>
+		<typeAlias type="com.web.home.account.model.SignVO" alias="signVO"/>
 	</typeAliases>
 </configuration>
