@@ -23,8 +23,8 @@
 	 		<%
 	 			}
 	 		%>
-	 		<input class="login-input login-input2" type="text" name="user-id" placeholder="OSC 아이디" required>
-	 		<input class="login-input login-input2" type="password" name="user-pw" placeholder="비밀번호" required>
+	 		<input class="login-input login-input2" type="text" name="userId" placeholder="OSC 아이디" required>
+	 		<input class="login-input login-input2" type="password" name="password" placeholder="비밀번호" required>
 	 		<button class="login-input login_btn" type="submit">로그인</button>
 		</div>
 	</form>

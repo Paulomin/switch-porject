@@ -38,7 +38,6 @@
 				<label for="user_name">이름</label>
 				<input type="text" id="user_name" name ="username" class="sign-input" placeholder="이름" required>
 				<div class="warning-message">
-					<!-- 경고메시지 -->
 				</div>
 			</div>
 			<div class="sign-main-area">
@@ -51,7 +50,6 @@
 				<label for="user_phoneNum">연락처</label>
 				<input type="text" id="user_phoneNum" name ="phone" class="sign-input" placeholder="연락처" required>
 				<div class="warning-message">
-					<!-- 경고메시지 -->
 				</div>
 			</div>
 			<div class="sign-main-btn">

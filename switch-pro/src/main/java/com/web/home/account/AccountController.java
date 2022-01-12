@@ -1,13 +1,8 @@
 package com.web.home.account;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 import org.slf4j.*;
-import org.mybatis.logging.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 import org.springframework.ui.*;
@@ -15,8 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.web.home.account.model.*;
 import com.web.home.account.service.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Controller
 public class AccountController {
@@ -25,7 +18,6 @@ public class AccountController {
 	
 	@Autowired
 	private SignService service;
-	private SignDTO dto;
 	 
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
@@ -50,7 +42,21 @@ public class AccountController {
 		}
 	}
 	
-	@RequestMapping(value="/main", method=RequestMethod.POST)
-	public String login(SignDTO dto) {
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String login(LoginVO dto, HttpSession session, Model model) {
+		
+		LoginVO data = service.login(dto);
+		logger.info("controller 동작");
+		
+		if(data != null) {
+			session.setAttribute("logined", true);
+			
+			return "redirect: /main";
+		} else {
+			model.addAttribute("error", true);
+			model.addAttribute("error_msg", "일치 안함");
+		}
+		
+		return "/jsp/account/login";
 	}
 }

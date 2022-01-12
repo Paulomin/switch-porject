@@ -1,9 +1,8 @@
 package com.web.home.account.service;
 
-import org.mybatis.logging.*;
+import org.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
-import org.springframework.transaction.annotation.*;
 
 import com.web.home.account.model.*;
 
@@ -25,6 +24,13 @@ public class SignService {
 			return false;
 		}
 		
+	}
+	
+	public LoginVO login(LoginVO dto) {
+		LoginVO data = dao.selectLogin(dto);
+		logger.info("service 동작");
+		data.setPassword("");
+		return data;
 	}
 
 }
