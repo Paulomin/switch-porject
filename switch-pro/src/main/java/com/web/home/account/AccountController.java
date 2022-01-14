@@ -51,6 +51,8 @@ public class AccountController {
 		
 		if(data != null) {
 			session.setAttribute("logined", true);
+			// 이거 가지고 id가져오기
+			session.setAttribute("userid", dto);
 			
 			return "redirect: /main";
 		} else {
