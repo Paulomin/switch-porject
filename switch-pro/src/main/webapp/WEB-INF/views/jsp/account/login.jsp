@@ -15,10 +15,12 @@
 	 	<div class="login-area_box">
 	 		<span class="login_text">로그인</span>
 	 		<%
-	 			if(request.getAttribute("fail") != null) {
+	 			boolean res = false;
+	 		
+	 			if(request.getAttribute("error_msg") != null) {
 	 		%>
 	 		<div class="must-input">
-	 			<%= (String) request.getAttribute("fail") %>
+	 			<%= (String) request.getAttribute("error_msg") %>
 	 		</div>
 	 		<%
 	 			}

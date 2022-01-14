@@ -13,12 +13,15 @@
 <link type="text/css" rel="stylesheet" href="/static/css/main/main.css">
 </head>
 <body>
-	
+	<jsp:include page="/WEB-INF/views/jsp/main/top-menu.jsp" flush="false" />  
+
 	<div class="main-img">
 		<div class="main-img_area">
 			<img alt="main-img-file" src="/static/img/main.jpg">
 		</div>
 	</div>
+	
+	
 	<div class="h-text-area">
 		<div class="h-text-area-first">
 			<h2 class="h-text-h2">New Contents</h2>
@@ -28,6 +31,7 @@
 			<a href="./write"><button type="button" class="h-text-area-second_btn">글등록</button></a>
 		</div>
 	</div>
+	<% if(session.getAttribute("logined") != null); %>
 	<div class="main-contents-area">
 		<div class="contents-box">
 			<div class="contents-img">

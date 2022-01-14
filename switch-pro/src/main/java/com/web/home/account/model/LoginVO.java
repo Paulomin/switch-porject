@@ -4,6 +4,13 @@ public class LoginVO {
 	private String userId;
 	private String password;
 	
+	public LoginVO() {}
+	
+	public LoginVO(String userId, String password) {
+		this.userId = userId;
+		this.password = password;
+	}
+	
 	public String getUserId() {
 		return userId;
 	}

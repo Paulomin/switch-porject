@@ -25,6 +25,7 @@ public class AccountController {
 		logger.info("login 페이지 요청 성공");
 		return "/jsp/account/login";
 	}
+	
 	@RequestMapping(value="/sign", method=RequestMethod.GET)
 	public String sign() {
 		return "jsp/account/sign";
@@ -58,5 +59,13 @@ public class AccountController {
 		}
 		
 		return "/jsp/account/login";
+	}
+	
+	@RequestMapping(value="/logout", method=RequestMethod.GET)
+	public String logout(HttpSession session, HttpServletRequest request) {
+		session = request.getSession();
+		System.out.println(request.getSession());
+		session.invalidate(); // 세션에 저장된 내용 삭제
+		return "redirect: /main";
 	}
 }
